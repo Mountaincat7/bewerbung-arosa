@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nina Glasow – Bewerbung Leiter:in Marketing/Gästeservice/Events | Arosa Bergbahnen AG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --arosa-red: #C8102E;
+            --arosa-red-dark: #A00D24;
+            --arosa-red-light: #E8344D;
+            --arosa-dark: #1A1A2E;
+            --arosa-snow: #F8F9FC;
+            --arosa-white: #FFFFFF;
+            --arosa-gray: #6B7280;
+            --arosa-gray-light: #E5E7EB;
+            --arosa-blue: #1E3A5F;
+            --arosa-sky: #87CEEB;
+            --arosa-gold: #D4A843;
+            --gradient-mountain: linear-gradient(135deg, #1A1A2E 0%, #2D3561 50%, #C8102E 100%);
+            --gradient-snow: linear-gradient(180deg, #F8F9FC 0%, #FFFFFF 100%);
+            --shadow-soft: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-medium: 0 8px 40px rgba(0,0,0,0.12);
+            --shadow-strong: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--arosa-dark);
+            background: var(--arosa-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ═══════════════════════════════════════
+           NAVIGATION
+        ═══════════════════════════════════════ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        .nav.scrolled {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            padding: 0.6rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--arosa-white);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .nav-brand {
+            color: var(--arosa-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.85);
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav.scrolled .nav-links a {
+            color: var(--arosa-gray);
+        }
+
+        .nav-links a:hover {
+            color: var(--arosa-white);
+        }
+
+        .nav.scrolled .nav-links a:hover {
+            color: var(--arosa-red);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--arosa-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--arosa-red) !important;
+            color: var(--arosa-white) !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            transition: background 0.3s ease, transform 0.3s ease !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--arosa-red-dark) !important;
+            color: var(--arosa-white) !important;
+            transform: translateY(-1px);
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        /* Mobile nav toggle */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--arosa-white);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled .nav-toggle span {
+            background: var(--arosa-dark);
+        }
+
+        /* ═══════════════════════════════════════
+           HERO SECTION
+        ═══════════════════════════════════════ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--arosa-dark);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(180deg, rgba(26,26,46,0.3) 0%, rgba(26,26,46,0.5) 40%, rgba(200,16,46,0.15) 100%),
+                url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1920&q=80') center/cover no-repeat;
+            transform: scale(1.05);
+            animation: heroZoom 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroZoom {
+            0% { transform: scale(1.05); }
+            100% { transform: scale(1.12); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, 
+                rgba(26,26,46,0.6) 0%, 
+                rgba(26,26,46,0.4) 30%,
+                rgba(26,26,46,0.5) 60%,
+                rgba(200,16,46,0.2) 100%
+            );
+        }
+
+        /* Floating snow particles */
+        .snow-particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .snow-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 50%;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% { transform: translateY(-10vh) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(110vh) translateX(100px); opacity: 0; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(200,16,46,0.2);
+            border: 1px solid rgba(200,16,46,0.4);
+            color: rgba(255,255,255,0.95);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-badge-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--arosa-red);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            color: var(--arosa-white);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--arosa-red-light);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: rgba(255,255,255,0.8);
+            font-weight: 300;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--arosa-red);
+            color: var(--arosa-white);
+            box-shadow: 0 4px 20px rgba(200,16,46,0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--arosa-red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(200,16,46,0.5);
+        }
+
+        .btn-outline {
+            background: rgba(255,255,255,0.1);
+            color: var(--arosa-white);
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { height: 40px; opacity: 1; }
+            50% { height: 25px; opacity: 0.5; }
+        }
+
+        /* ═══════════════════════════════════════
+           SECTION STYLES
+        ═══════════════════════════════════════ */
+        .section {
+            padding: 6rem 2rem;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--arosa-red);
+            margin-bottom: 1rem;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: var(--arosa-red);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--arosa-dark);
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--arosa-gray);
+            max-width: 650px;
+            line-height: 1.8;
+        }
+
+        /* ═══════════════════════════════════════
+           INTRO / PITCH SECTION
+        ═══════════════════════════════════════ */
+        .intro {
+            background: var(--arosa-snow);
+            position: relative;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-text blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--arosa-dark);
+            border-left: 3px solid var(--arosa-red);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            line-height: 1.6;
+        }
+
+        .intro-text p {
+            color: var(--arosa-gray);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .intro-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--arosa-white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--arosa-red);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--arosa-gray);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-detail {
+            font-size: 0.7rem;
+            color: var(--arosa-gray-light);
+            margin-top: 0.3rem;
+        }
+
+        /* ═══════════════════════════════════════
+           PERFECT MATCH SECTION
+        ═══════════════════════════════════════ */
+        .match {
+            background: var(--arosa-white);
+        }
+
+        .match-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .match-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .match-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .match-card {
+            background: var(--arosa-snow);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .match-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--arosa-red);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .match-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .match-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .match-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--arosa-red), var(--arosa-red-dark));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .match-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--arosa-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .match-card p {
+            font-size: 0.9rem;
+            color: var(--arosa-gray);
+            line-height: 1.7;
+        }
+
+        .match-tag {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.3rem 0.8rem;
+            background: rgba(200,16,46,0.08);
+            color: var(--arosa-red);
+            font-size: 0.72rem;
+            font-weight: 600;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ═══════════════════════════════════════
+           EXPERIENCE TIMELINE
+        ═══════════════════════════════════════ */
+        .experience {
+            background: var(--arosa-dark);
+            color: var(--arosa-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(200,16,46,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .experience .section-label {
+            color: var(--arosa-red-light);
+        }
+
+        .experience .section-label::before {
+            background: var(--arosa-red-light);
+        }
+
+        .experience .section-title {
+            color: var(--arosa-white);
+        }
+
+        .experience .section-subtitle {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .experience-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .experience-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--arosa-red), rgba(200,16,46,0.2));
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            text-align: right;
+            padding-right: 3rem;
+            padding-left: 0;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            padding-left: 3rem;
+        }
+
+        .timeline-content {
+            width: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 14px;
+            background: var(--arosa-red);
+            border-radius: 50%;
+            border: 3px solid var(--arosa-dark);
+            z-index: 2;
+            top: 5px;
+        }
+
+        .timeline-year {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--arosa-red-light);
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-role {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--arosa-white);
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-company {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.7;
+        }
+
+        .timeline-highlight {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.25rem 0.6rem;
+            background: rgba(200,16,46,0.15);
+            color: var(--arosa-red-light);
+            font-size: 0.72rem;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
+        /* Featured timeline item (Gold Standard) */
+        .timeline-item.featured {
+            margin-bottom: 3.5rem;
+        }
+
+        .timeline-item.featured .timeline-content {
+            width: calc(50% + 40px);
+            background: linear-gradient(135deg, rgba(200,16,46,0.08) 0%, rgba(200,16,46,0.03) 100%);
+            border: 1px solid rgba(200,16,46,0.25);
+            border-radius: 16px;
+            padding: 2rem 2.5rem !important;
+            position: relative;
+        }
+
+        .timeline-item.featured .timeline-dot {
+            width: 22px;
+            height: 22px;
+            background: var(--arosa-red);
+            border: 4px solid var(--arosa-dark);
+            box-shadow: 0 0 0 3px rgba(200,16,46,0.3), 0 0 20px rgba(200,16,46,0.2);
+            top: 2rem;
+        }
+
+        .timeline-item.featured .timeline-year {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .timeline-item.featured .timeline-role {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item.featured .timeline-company {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item.featured .timeline-desc {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+
+        .featured-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--arosa-red);
+            color: var(--arosa-white);
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .featured-badge svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        .featured-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(200,16,46,0.15);
+        }
+
+        .featured-metric {
+            text-align: center;
+        }
+
+        .featured-metric-value {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--arosa-red-light);
+            line-height: 1;
+        }
+
+        .featured-metric-label {
+            font-size: 0.68rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.3rem;
+            line-height: 1.3;
+        }
+
+        .featured-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 1.2rem;
+        }
+
+        .featured-tag {
+            padding: 0.25rem 0.7rem;
+            background: rgba(200,16,46,0.12);
+            color: var(--arosa-red-light);
+            font-size: 0.7rem;
+            font-weight: 600;
+            border-radius: 50px;
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 968px) {
+            .timeline-item.featured .timeline-content {
+                width: 100%;
+                padding: 1.5rem !important;
+            }
+
+            .featured-metrics {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+            }
+
+            .timeline-item.featured .timeline-dot {
+                top: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .featured-metrics {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        /* ═══════════════════════════════════════
+           VISION SECTION
+        ═══════════════════════════════════════ */
+        .vision {
+            background: var(--arosa-white);
+            position: relative;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .vision-card {
+            background: var(--arosa-snow);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--arosa-red);
+        }
+
+        .vision-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--arosa-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .vision-card p {
+            font-size: 0.9rem;
+            color: var(--arosa-gray);
+            line-height: 1.8;
+        }
+
+        .vision-quote {
+            background: linear-gradient(135deg, var(--arosa-red), var(--arosa-red-dark));
+            border-radius: 16px;
+            padding: 3rem;
+            color: var(--arosa-white);
+            position: relative;
+        }
+
+        .vision-quote::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        .vision-quote p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .vision-quote .quote-author {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-size: 0.85rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* ═══════════════════════════════════════
+           SKILLS SECTION
+        ═══════════════════════════════════════ */
+        .skills {
+            background: var(--arosa-snow);
+        }
+
+        .skills-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .skills-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .skills-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--arosa-white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .skill-category h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--arosa-dark);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--arosa-snow);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.35rem 0.8rem;
+            background: var(--arosa-snow);
+            color: var(--arosa-dark);
+            font-size: 0.78rem;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--arosa-red);
+            color: var(--arosa-white);
+        }
+
+        .skill-tag.highlight {
+            background: rgba(200,16,46,0.08);
+            color: var(--arosa-red);
+            font-weight: 600;
+        }
+
+        /* ═══════════════════════════════════════
+           EDUCATION & CERTIFICATIONS
+        ═══════════════════════════════════════ */
+        .education {
+            background: var(--arosa-white);
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .edu-block h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--arosa-dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .edu-item {
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--arosa-gray-light);
+        }
+
+        .edu-item:last-child {
+            border-bottom: none;
+        }
+
+        .edu-degree {
+            font-weight: 600;
+            color: var(--arosa-dark);
+            font-size: 0.95rem;
+        }
+
+        .edu-school {
+            color: var(--arosa-gray);
+            font-size: 0.85rem;
+            margin-top: 0.2rem;
+        }
+
+        .cert-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--arosa-snow);
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-badge:hover {
+            transform: translateX(4px);
+        }
+
+        .cert-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--arosa-red), var(--arosa-red-dark));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .cert-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--arosa-dark);
+        }
+
+        /* ═══════════════════════════════════════
+           PERSONAL SECTION
+        ═══════════════════════════════════════ */
+        .personal {
+            background: var(--arosa-snow);
+        }
+
+        .personal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .personal-card {
+            background: var(--arosa-white);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease;
+        }
+
+        .personal-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .personal-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .personal-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--arosa-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .personal-card p {
+            font-size: 0.85rem;
+            color: var(--arosa-gray);
+            line-height: 1.7;
+        }
+
+        .personal-highlight {
+            color: var(--arosa-red);
+            font-weight: 700;
+        }
+
+        /* ═══════════════════════════════════════
+           CTA / CONTACT SECTION
+        ═══════════════════════════════════════ */
+        .cta {
+            background: linear-gradient(135deg, var(--arosa-dark) 0%, #2D3561 50%, var(--arosa-red-dark) 100%);
+            color: var(--arosa-white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=1920&q=80') center/cover no-repeat;
+            opacity: 0.1;
+        }
+
+        .cta .section-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta .section-title {
+            color: var(--arosa-white);
+            margin-bottom: 1rem;
+        }
+
+        .cta .section-subtitle {
+            color: rgba(255,255,255,0.7);
+            margin: 0 auto 3rem;
+            max-width: 600px;
+        }
+
+        .cta-contact {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .cta-contact-item:hover {
+            color: var(--arosa-white);
+        }
+
+        .cta-contact-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-addressee {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cta-addressee p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        .cta-addressee strong {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* ═══════════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════════ */
+        .footer {
+            background: #0F0F1A;
+            color: rgba(255,255,255,0.4);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+        }
+
+        .footer a {
+            color: var(--arosa-red-light);
+            text-decoration: none;
+        }
+
+        /* ═══════════════════════════════════════
+           ANIMATIONS
+        ═══════════════════════════════════════ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════ */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: var(--shadow-medium);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                color: var(--arosa-dark) !important;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .intro-grid,
+            .vision-grid,
+            .edu-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .match-grid,
+            .skills-categories,
+            .personal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(odd) {
+                flex-direction: column;
+                padding-left: 50px;
+            }
+
+            .timeline-content,
+            .timeline-item:nth-child(odd) .timeline-content {
+                width: 100%;
+                text-align: left;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .cta-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .intro-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════ NAVIGATION ═══════════════════════════════════════ -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <div class="nav-brand">Nina Glasow</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#pitch">Warum ich</a></li>
+                <li><a href="#match">Perfect Match</a></li>
+                <li><a href="#erfahrung">Erfahrung</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#skills">Kompetenzen</a></li>
+                <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <!-- Snow particles -->
+        <div class="snow-particles" id="snowParticles"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Bewerbung · Arosa Bergbahnen AG
+            </div>
+            <h1>Wir komponieren<br><span>perfekte Tage</span> am Berg</h1>
+            <p class="hero-subtitle">
+                Nina Glasow · Bewerbung als Leiter:in Marketing, Gästeservice & Events<br>
+                – mit Herzblut für Berge, Gäste und unvergessliche Erlebnisse.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#pitch" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    Mein Pitch
+                </a>
+                <a href="#kontakt" class="btn btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                    Kontakt aufnehmen
+                </a>
+            </div>
+        </div>
+
+        <a href="#pitch" class="hero-scroll">
+            Entdecken
+            <div class="scroll-line"></div>
+        </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════ INTRO / PITCH ═══════════════════════════════════════ -->
+    <section class="section intro" id="pitch">
+        <div class="section-inner">
+            <div class="intro-grid">
+                <div class="intro-text fade-in-left">
+                    <div class="section-label">Mein Pitch</div>
+                    <h2 class="section-title">Gastfreundschaft trifft auf<br>digitale Exzellenz</h2>
+                    
+                    <blockquote>
+                        «Einen Gast von der Talstation auf die Bergstation zu befördern ist die eine Sache. Ihm dabei ein gutes Gefühl zu vermitteln die andere.»
+                    </blockquote>
+
+                    <p>
+                        Dieses Zitat aus Ihrem Leitbild spricht mir aus der Seele. In über 8 Jahren Destinationsmarketing und 4 Jahren digitalem Performance-Marketing habe ich genau das gelebt: <strong>unvergessliche Erlebnisse schaffen, die Gäste wiederkommen lassen.</strong>
+                    </p>
+                    <p>
+                        Als gebürtige Bergliebhaberin – ob auf Ski oder dem Mountainbike – bringe ich nicht nur Fachwissen mit, sondern auch eine tiefe persönliche Verbundenheit mit der alpinen Welt. Für die Arosa Bergbahnen AG möchte ich die Brücke zwischen <strong>traditioneller Gastlichkeit und modernster digitaler Vermarktung</strong> schlagen – ganz im Sinne Ihres Leitbilds.
+                    </p>
+                    <p>
+                        Ich bin überzeugt: Meine Kombination aus strategischem Marketing, Event-Erfahrung, Teamführung und datengetriebener Kampagnensteuerung ist genau das, was Arosa braucht, um die Erwartungen der Gäste nicht nur zu erfüllen, sondern zu übertreffen.
+                    </p>
+                </div>
+
+                <div class="intro-stats fade-in-right">
+                    <div class="stat-card">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Jahre Destinationsmarketing</div>
+                        <div class="stat-detail">DMO, Tourismus, Alpine Region</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Mitarbeitende geführt</div>
+                        <div class="stat-detail">Marketing-Team mit Budget­verantwortung</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1.8M</div>
+                        <div class="stat-label">EUR Projektbudget</div>
+                        <div class="stat-detail">Budget- & Personalverantwortung</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">200k</div>
+                        <div class="stat-label">Instagram Follower</div>
+                        <div class="stat-detail">@fernwehglobal – Reise & Berg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ PERFECT MATCH ═══════════════════════════════════════ -->
+    <section class="section match" id="match">
+        <div class="section-inner">
+            <div class="match-header fade-in">
+                <div class="section-label">Perfect Match</div>
+                <h2 class="section-title">Warum Nina &times; Arosa Bergbahnen</h2>
+                <p class="section-subtitle">
+                    Jeder Aspekt der Stelle spiegelt meine Erfahrung und Leidenschaft wider. Hier ist der perfekte Fit im Detail.
+                </p>
+            </div>
+
+            <div class="match-grid">
+                <div class="match-card fade-in">
+                    <div class="match-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Gästeservice & Qualität</h3>
+                    <p>Gästebefragungen, Servicequalitäts-Zertifizierungen und Zufriedenheits-Analysen – alles aus meiner DMO-Arbeit im Chiemgau mit über 600'000 Gästen jährlich.</p>
+                    <span class="match-tag">Qualitätsgütesiegel-Erfahrung</span>
+                </div>
+
+                <div class="match-card fade-in" style="transition-delay: 0.1s">
+                    <div class="match-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                    </div>
+                    <h3>Digitales Marketing</h3>
+                    <p>Performance Marketing mit 7.6 Mio. TikTok/Facebook Views. SEO-Strategie mit 4 Mio. Suchanfragen in 6 Monaten. Datengetrieben, ROI-fokussiert.</p>
+                    <span class="match-tag">CHF 17'000/Mt. Kostenreduktion</span>
+                </div>
+
+                <div class="match-card fade-in" style="transition-delay: 0.2s">
+                    <div class="match-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    </div>
+                    <h3>Event-Management</h3>
+                    <p>Von Guinness World Records (25'000 Teilnehmer) über BR Radltour (80'000 Besucher) bis hin zu Kongressen mit 2'000 Gästen – Events sind meine DNA.</p>
+                    <span class="match-tag">Bis 80'000 Teilnehmer</span>
+                </div>
+
+                <div class="match-card fade-in" style="transition-delay: 0.3s">
+                    <div class="match-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3>Teamführung</h3>
+                    <p>Erfahrung in der Führung von bis zu 10 Mitarbeitenden inkl. Coaching, Zielvereinbarung, Einsatzplanung und Ausbildung – genau wie die ABB es lebt.</p>
+                    <span class="match-tag">Personalverantwortung</span>
+                </div>
+
+                <div class="match-card fade-in" style="transition-delay: 0.4s">
+                    <div class="match-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3>Stakeholder-Management</h3>
+                    <p>Zusammenarbeit mit Gemeinden, Bürgermeistern, Bergbahnen, Hotels, Skigebieten, Sendern (BR, ORF) und EU-Förderstellen – ein Netzwerk, das zählt.</p>
+                    <span class="match-tag">Alpin-Tourismus Netzwerk</span>
+                </div>
+
+                <div class="match-card fade-in" style="transition-delay: 0.5s">
+                    <div class="match-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h3>Herzblut für Berge</h3>
+                    <p>Leidenschaftliche Skifahrerin und Mountainbikerin. Reise-Influencerin mit 200k Followern. Arosa ist nicht nur ein Job – es ist ein Lebenstraum.</p>
+                    <span class="match-tag">@fernwehglobal · 200k Follower</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ EXPERIENCE TIMELINE ═══════════════════════════════════════ -->
+    <section class="section experience" id="erfahrung">
+        <div class="section-inner">
+            <div class="experience-header fade-in">
+                <div class="section-label">Berufserfahrung</div>
+                <h2 class="section-title">Mein Weg zum Gipfel</h2>
+                <p class="section-subtitle">
+                    Über 16 Jahre Erfahrung in Marketing, Tourismus und Events – ein Karriereweg, der direkt nach Arosa führt.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024 – Heute</div>
+                        <div class="timeline-role">Head of Growth & Operations</div>
+                        <div class="timeline-company">Glow Media GmbH, Cham (CH)</div>
+                        <div class="timeline-desc">
+                            Strategische Skalierung im DACH-Raum. Aufbau und Führung Sales-Team. Über 1'000 Recruiting-Kampagnen für 200+ Unternehmenskunden. Social Ads, Marketing-Automation.
+                        </div>
+                        <span class="timeline-highlight">1'000+ Kampagnen · 200+ Kunden</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022 – 2024</div>
+                        <div class="timeline-role">Head of Marketing</div>
+                        <div class="timeline-company">Sonect AG, Zürich</div>
+                        <div class="timeline-desc">
+                            Gesamtverantwortung Schweizer Markt. Partnermanagement (TWINT, Valora, Volg). SEO-Strategie mit 4 Mio. Suchanfragen. Social Ads mit 7.6 Mio. Views. Go-to-Market Italien & Mexiko.
+                        </div>
+                        <span class="timeline-highlight">CHF 17k/Mt. Kostenreduktion</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021 – 2022</div>
+                        <div class="timeline-role">Digital Marketing Manager E-Commerce</div>
+                        <div class="timeline-company">Virtualrunners, München</div>
+                        <div class="timeline-desc">
+                            Performance Marketing international (5x ROAS). Organisation Guinness World Record Event (25'000+ Teilnehmer). Partnerschaften mit Warner Brothers & Adidas.
+                        </div>
+                        <span class="timeline-highlight">Guinness World Record Event</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item featured fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="featured-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            Kernkompetenz für Arosa
+                        </div>
+                        <div class="timeline-year">2014 – 2021 · 7 Jahre</div>
+                        <div class="timeline-role">Leiterin Projekt, Kongress & Marketing</div>
+                        <div class="timeline-company">Chiemgau Tourismus e.V. (DMO), Traunstein (DE)</div>
+                        <div class="timeline-desc">
+                            Gesamtverantwortung für Marketing, Produktentwicklung und Eventmanagement einer der grössten bayerischen Tourismusregionen mit über 600'000 Gästen jährlich. Strategischer Aufbau und operative Führung eines 10-köpfigen Teams mit voller Budget- und Personalverantwortung (EUR 1.8M).
+                            <br><br>
+                            Aufbau und Steuerung von fünf strategischen Geschäftsfeldern: <strong>Wintertourismus & Bergbahn-Kooperation</strong>, Radtourismus (Kooperation mit Bergbahnen für Bike-Transport), Wandern, Golf und Kongresstourismus. Direkte Zusammenarbeit mit Bergbahnbetreibern, Skigebieten, Gemeinden, Bürgermeistern und regionalen Leistungsträgern – ein Stakeholder-Netzwerk, das direkt auf Arosa übertragbar ist.
+                            <br><br>
+                            Konzeption und Umsetzung von Grossevents mit bis zu 80'000 Besuchern (BR Radltour), Organisation von Fachkongressen (bis 2'000 Teilnehmer) und Durchführung regionaler Gästebefragungen zur Qualitätssicherung. Markenentwicklung, Omnichannel-Kampagnen und Einführung datengetriebener Marketingprozesse – von Print über Social Media bis hin zu SEO und Content-Strategie.
+                        </div>
+                        <div class="featured-metrics">
+                            <div class="featured-metric">
+                                <div class="featured-metric-value">1.8M</div>
+                                <div class="featured-metric-label">EUR Budget­verantwortung</div>
+                            </div>
+                            <div class="featured-metric">
+                                <div class="featured-metric-value">10</div>
+                                <div class="featured-metric-label">Mitarbeitende geführt</div>
+                            </div>
+                            <div class="featured-metric">
+                                <div class="featured-metric-value">80k</div>
+                                <div class="featured-metric-label">Besucher grösstes Event</div>
+                            </div>
+                        </div>
+                        <div class="featured-tags">
+                            <span class="featured-tag">Destinationsmarketing</span>
+                            <span class="featured-tag">Bergbahn-Kooperation</span>
+                            <span class="featured-tag">Teamführung</span>
+                            <span class="featured-tag">Eventmanagement</span>
+                            <span class="featured-tag">Gästebefragungen</span>
+                            <span class="featured-tag">Budgetverantwortung</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020 – 2022</div>
+                        <div class="timeline-role">Beraterin / Event & Marketing</div>
+                        <div class="timeline-company">Scalaria Event Resort, St. Wolfgang (AT)</div>
+                        <div class="timeline-desc">
+                            Repositionierung nach Umsatzeinbruch. Einstieg in digitale und hybride Eventformate. Co-Organisation «Living Legends of Aviation 2022».
+                        </div>
+                        <span class="timeline-highlight">Digitale Eventinnovation</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2007 – 2012</div>
+                        <div class="timeline-role">F&E Managerin, Programmleitung & Lehrbeauftragte</div>
+                        <div class="timeline-company">Technische Hochschule Rosenheim</div>
+                        <div class="timeline-desc">
+                            Projektleitung Forschungsprojekte inkl. Solar Decathlon. Aufbau Master-Studiengang «Green Building». Organisation Kongresse, Events, Messen.
+                        </div>
+                        <span class="timeline-highlight">Nachhaltigkeitskompetenz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ VISION ═══════════════════════════════════════ -->
+    <section class="section vision" id="vision">
+        <div class="section-inner">
+            <div class="section-label fade-in">Meine Vision für Arosa</div>
+            <h2 class="section-title fade-in">Was ich für die Arosa Bergbahnen bewegen werde</h2>
+
+            <div class="vision-grid">
+                <div class="fade-in-left">
+                    <div class="vision-card">
+                        <h3>Digitale Gästereise optimieren</h3>
+                        <p>Vom ersten Instagram-Post über die Ticketbuchung im Webshop bis zur Google-Bewertung nach dem perfekten Tag am Weisshorn – ich gestalte eine durchgängige, datengetriebene Customer Journey, die Gäste begeistert und die Marke Arosa Lenzerheide stärkt.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3>Events als Erlebnis-Magnete</h3>
+                        <p>Arosa hat mit Escape Routes, Vollmondskifahren und Weltmeisterschaften ein starkes Fundament. Ich bringe frische Eventkonzepte, die neue Zielgruppen anziehen – von Community-Events bis zu Signature-Formaten, die national und international strahlen.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3>Service-Exzellenz messbar machen</h3>
+                        <p>Meine Erfahrung mit Gästebefragungen, Service-Zertifizierungen und Qualitätsmanagement bringe ich ein, um den exzellenten Gästeservice der ABB weiterzuentwickeln – datenbasiert, mit klaren KPIs und dem Qualitätsgütesiegel als Massstab.</p>
+                    </div>
+                </div>
+
+                <div class="fade-in-right">
+                    <div class="vision-card">
+                        <h3>Nachhaltigkeit als Markenwert</h3>
+                        <p>«#herzklopfafürmorgen» ist mehr als ein Hashtag. Mit meiner Erfahrung aus dem «Green Building»-Studiengang und nachhaltiger Tourismusentwicklung positioniere ich Nachhaltigkeit als authentischen, sichtbaren Markenwert in der Kommunikation.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3>Team begeistern & entwickeln</h3>
+                        <p>Ich weiss: Mitarbeitende machen den Unterschied. Als Certified Scrum Master und NLP-Practitioner bringe ich moderne Führungsmethoden ein und schaffe eine Kultur, in der das Team Gästeservice mit Herzblut lebt – genau wie es das Leitbild der ABB vorsieht.</p>
+                    </div>
+
+                    <div class="vision-quote">
+                        <p>Mein Ziel: Die Arosa Bergbahnen als innovativste, gästenächste Bergbahngesellschaft der Schweiz positionieren – mit der perfekten Verbindung aus Tradition, Innovation und Herzlichkeit.</p>
+                        <div class="quote-author">– Nina Glasow</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SKILLS ═══════════════════════════════════════ -->
+    <section class="section skills" id="skills">
+        <div class="section-inner">
+            <div class="skills-header fade-in">
+                <div class="section-label">Kompetenzen</div>
+                <h2 class="section-title">Werkzeuge für den Gipfelsturm</h2>
+                <p class="section-subtitle">
+                    Ein breites Toolset, das Marketing, Technik und Kreativität vereint – bereit für den Einsatz in Arosa.
+                </p>
+            </div>
+
+            <div class="skills-categories">
+                <div class="skill-category fade-in">
+                    <h3>Marketing & Analytics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Performance Marketing</span>
+                        <span class="skill-tag highlight">SEO & Content</span>
+                        <span class="skill-tag">Google Analytics 4</span>
+                        <span class="skill-tag">Amplitude</span>
+                        <span class="skill-tag">SEO PowerSuite</span>
+                        <span class="skill-tag">Looker Studio</span>
+                        <span class="skill-tag highlight">Social Ads</span>
+                        <span class="skill-tag">Meta Business Suite</span>
+                        <span class="skill-tag">TikTok Ads</span>
+                        <span class="skill-tag">Hootsuite</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in" style="transition-delay: 0.1s">
+                    <h3>Kreation & Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Adobe Creative Cloud</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag highlight">Content Creation</span>
+                        <span class="skill-tag">Video & Reels</span>
+                        <span class="skill-tag">Storytelling</span>
+                        <span class="skill-tag">Brand Development</span>
+                        <span class="skill-tag highlight">Community Building</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in" style="transition-delay: 0.2s">
+                    <h3>Projektmanagement & CRM</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Certified Scrum Master</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Asana</span>
+                        <span class="skill-tag">Notion</span>
+                        <span class="skill-tag">Slack</span>
+                        <span class="skill-tag highlight">HubSpot</span>
+                        <span class="skill-tag">Salesforce</span>
+                        <span class="skill-tag highlight">Budgetplanung</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in" style="transition-delay: 0.3s">
+                    <h3>AI & Automation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">OpenAI / ChatGPT</span>
+                        <span class="skill-tag">Sora</span>
+                        <span class="skill-tag">HeyGen</span>
+                        <span class="skill-tag highlight">Make (Automation)</span>
+                        <span class="skill-tag">Marketing Automation</span>
+                        <span class="skill-tag">AI Content</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in" style="transition-delay: 0.4s">
+                    <h3>Tourismus & Events</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Destinationsmarketing</span>
+                        <span class="skill-tag highlight">Event-Organisation</span>
+                        <span class="skill-tag">Messe & Kongress</span>
+                        <span class="skill-tag">Bergbahn-Kooperation</span>
+                        <span class="skill-tag">Gästebefragungen</span>
+                        <span class="skill-tag highlight">ServiceQualität</span>
+                        <span class="skill-tag">Omnichannel</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in" style="transition-delay: 0.5s">
+                    <h3>Sprachen & Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Deutsch (Muttersprache)</span>
+                        <span class="skill-tag highlight">Englisch C1</span>
+                        <span class="skill-tag">Spanisch B1</span>
+                        <span class="skill-tag highlight">NLP-Practitioner</span>
+                        <span class="skill-tag">Teamführung</span>
+                        <span class="skill-tag">Coaching</span>
+                        <span class="skill-tag">Stakeholder-Mgmt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ EDUCATION ═══════════════════════════════════════ -->
+    <section class="section education" id="bildung">
+        <div class="section-inner">
+            <div class="section-label fade-in">Bildung & Zertifizierungen</div>
+            <h2 class="section-title fade-in">Fundament für Spitzenleistung</h2>
+
+            <div class="edu-grid">
+                <div class="edu-block fade-in-left">
+                    <h3>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--arosa-red)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+                        Akademische Ausbildung
+                    </h3>
+                    <div class="edu-item">
+                        <div class="edu-degree">Master of Political Science</div>
+                        <div class="edu-school">Friedrich-Alexander-Universität, Nürnberg</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-degree">Bachelor of Political Science</div>
+                        <div class="edu-school">Gerhart-Mercator-Universität, Duisburg</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-degree">Staatlich geprüfte Fremdsprachen&shy;korrespondentin</div>
+                        <div class="edu-school">Berufsfachschule für Fremdsprachen, Ingolstadt</div>
+                    </div>
+                </div>
+
+                <div class="edu-block fade-in-right">
+                    <h3>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--arosa-red)" stroke-width="2"><path d="M12 15l-2 5 9-8.5L12 9V2L3 11.5l9 8.5-2-5"/></svg>
+                        Zertifizierungen
+                    </h3>
+                    <div class="cert-badge">
+                        <div class="cert-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        </div>
+                        <span class="cert-name">Certified Scrum Master</span>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                        </div>
+                        <span class="cert-name">NLP-Practitioner</span>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                        </div>
+                        <span class="cert-name">Digital Marketing Associate</span>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <span class="cert-name">Advanced Content & SEO Tactics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ PERSONAL ═══════════════════════════════════════ -->
+    <section class="section personal">
+        <div class="section-inner">
+            <div class="skills-header fade-in">
+                <div class="section-label">Persönlich</div>
+                <h2 class="section-title">Mehr als nur ein CV</h2>
+                <p class="section-subtitle">
+                    Was mich antreibt und warum Arosa mein Herzensort ist.
+                </p>
+            </div>
+
+            <div class="personal-grid">
+                <div class="personal-card fade-in">
+                    <div class="personal-icon">⛷️</div>
+                    <h3>Alpinsport-Leidenschaft</h3>
+                    <p>Ski und Mountainbike sind nicht Hobby, sondern Lifestyle. Ich <strong>lebe</strong>, was ich vermarkte – und brenne dafür, andere mit dieser Begeisterung anzustecken.</p>
+                </div>
+
+                <div class="personal-card fade-in" style="transition-delay: 0.1s">
+                    <div class="personal-icon">📸</div>
+                    <h3>@fernwehglobal</h3>
+                    <p>Mit <span class="personal-highlight">200'000 Followern</span> auf Instagram weiss ich, wie man Bergwelten inszeniert und Communities aufbaut – ein direkter Mehrwert für die Arosa-Kommunikation.</p>
+                </div>
+
+                <div class="personal-card fade-in" style="transition-delay: 0.2s">
+                    <div class="personal-icon">🏔️</div>
+                    <h3>Wohnort Schweiz</h3>
+                    <p>Aktuell in <strong>Cham (ZG)</strong> wohnhaft – bereit für den Umzug ins Freizeitparadies Arosa. Die Schweiz ist seit Jahren mein Lebensmittelpunkt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ CTA / CONTACT ═══════════════════════════════════════ -->
+    <section class="section cta" id="kontakt">
+        <div class="section-inner">
+            <div class="section-label fade-in" style="color: var(--arosa-red-light);">
+                Kontakt
+            </div>
+            <h2 class="section-title fade-in">Lassen Sie uns<br>gemeinsam Gipfel erreichen</h2>
+            <p class="section-subtitle fade-in">
+                Ich freue mich auf ein persönliches Gespräch und darauf, Sie von meiner Begeisterung für Arosa zu überzeugen.
+            </p>
+
+            <div class="cta-contact fade-in">
+                <a href="tel:+41768145878" class="cta-contact-item">
+                    <div class="cta-contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    +41 76 814 58 78
+                </a>
+                <a href="mailto:nina.glow@gmail.com" class="cta-contact-item">
+                    <div class="cta-contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    nina.glow@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/nina-glasow" target="_blank" class="cta-contact-item">
+                    <div class="cta-contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </div>
+                    LinkedIn Profil
+                </a>
+            </div>
+
+            <a href="mailto:nina.glow@gmail.com?subject=Bewerbung%20Leiter:in%20Marketing/G%C3%A4steservice/Events%20%E2%80%93%20Nina%20Glasow" class="btn btn-primary fade-in" style="font-size: 1rem; padding: 1.1rem 2.5rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Jetzt Gespräch vereinbaren
+            </a>
+
+            <div class="cta-addressee fade-in">
+                <p>Bewerbung z.Hd. <strong>Bettina Bass</strong></p>
+                <p>Leiterin Administration · Arosa Bergbahnen AG</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">Seeblickstrasse 29 · CH-7050 Arosa · bettina.bass@arosalenzerheide.swiss</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+    <footer class="footer">
+        <p>© 2026 Nina Glasow · Erstellt mit Leidenschaft für die <a href="https://arosalenzerheide.swiss" target="_blank">Arosa Bergbahnen AG</a></p>
+    </footer>
+
+    <!-- ═══════════════════════════════════════ JAVASCRIPT ═══════════════════════════════════════ -->
+    <script>
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile nav on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll animations (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Snow particles
+        const snowContainer = document.getElementById('snowParticles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('snow-particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.width = (Math.random() * 4 + 2) + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.animationDuration = (Math.random() * 8 + 6) + 's';
+            particle.style.animationDelay = (Math.random() * 10) + 's';
+            particle.style.opacity = Math.random() * 0.5 + 0.2;
+            snowContainer.appendChild(particle);
+        }
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Counter animation for stat numbers
+        const animateCounter = (el) => {
+            const target = el.textContent;
+            const isFloat = target.includes('.');
+            const hasPlus = target.includes('+');
+            const hasM = target.includes('M');
+            const hasK = target.includes('k');
+            
+            let numericTarget;
+            if (hasM) numericTarget = parseFloat(target.replace('M', ''));
+            else if (hasK) numericTarget = parseFloat(target.replace('k', '').replace('+', ''));
+            else numericTarget = parseInt(target.replace('+', ''));
+            
+            let current = 0;
+            const duration = 2000;
+            const start = performance.now();
+            
+            const animate = (now) => {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                
+                current = numericTarget * eased;
+                
+                if (hasM) el.textContent = current.toFixed(1) + 'M';
+                else if (hasK) el.textContent = Math.round(current) + 'k';
+                else el.textContent = Math.round(current) + (hasPlus ? '+' : '');
+                
+                if (progress < 1) requestAnimationFrame(animate);
+            };
+            
+            requestAnimationFrame(animate);
+        };
+
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number').forEach(el => {
+            statObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
