@@ -296,6 +296,80 @@
             line-height: 1.8;
         }
 
+        .intro-portrait-col {
+            position: relative;
+        }
+
+        .intro-portrait-wrap {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .intro-portrait-wrap img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            object-position: center 8%;
+            display: block;
+            filter: contrast(1.06) saturate(0.85) brightness(1.02);
+            transform: scale(1.12);
+        }
+
+        .intro-portrait-overlay {
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(180deg, transparent 50%, rgba(26,26,46,0.7) 100%),
+                radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.15) 100%);
+        }
+
+        .intro-portrait-wrap::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,0,0,0.008) 2px,
+                    rgba(0,0,0,0.008) 4px
+                );
+            pointer-events: none;
+            mix-blend-mode: multiply;
+        }
+
+        .intro-portrait-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.8rem;
+        }
+
+        .intro-portrait-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--arosa-white);
+            margin-bottom: 0.3rem;
+        }
+
+        .intro-portrait-role {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 968px) {
+            .intro-portrait-wrap img {
+                height: 300px;
+            }
+        }
+
         .hero-cta-group {
             display: flex;
             gap: 1rem;
@@ -429,9 +503,9 @@
 
         .intro-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: 0.7fr 1fr 0.85fr;
+            gap: 3rem;
+            align-items: start;
         }
 
         .intro-text blockquote {
@@ -455,13 +529,13 @@
         .intro-stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .stat-card {
             background: var(--arosa-white);
-            border-radius: 16px;
-            padding: 2rem;
+            border-radius: 14px;
+            padding: 1.4rem 1rem;
             box-shadow: var(--shadow-soft);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -473,11 +547,11 @@
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 800;
             color: var(--arosa-red);
             line-height: 1;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .stat-label {
@@ -1073,38 +1147,50 @@
         }
 
         .personal-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
         }
 
-        .personal-card {
-            background: var(--arosa-white);
-            border-radius: 16px;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.3s ease;
+        .personal-images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
         }
 
-        .personal-card:hover {
-            transform: translateY(-4px);
+        .personal-img-card {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 3 / 4;
         }
 
-        .personal-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .personal-img-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
         }
 
-        .personal-card h3 {
+        .personal-img-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .personal-texts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .personal-text-block h3 {
             font-size: 1rem;
             font-weight: 700;
             color: var(--arosa-dark);
             margin-bottom: 0.5rem;
         }
 
-        .personal-card p {
-            font-size: 0.85rem;
+        .personal-text-block p {
+            font-size: 0.9rem;
             color: var(--arosa-gray);
             line-height: 1.7;
         }
@@ -1215,6 +1301,29 @@
         }
 
         /* ═══════════════════════════════════════
+           ACCENT IMAGES
+        ═══════════════════════════════════════ */
+        .accent-image {
+            max-width: 320px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            margin: 2rem auto;
+        }
+
+        .accent-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 968px) {
+            .accent-image {
+                max-width: 260px;
+            }
+        }
+
+        /* ═══════════════════════════════════════
            ANIMATIONS
         ═══════════════════════════════════════ */
         .fade-in {
@@ -1280,7 +1389,16 @@
                 display: block;
             }
 
-            .intro-grid,
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .intro-portrait-col {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
             .vision-grid,
             .edu-grid {
                 grid-template-columns: 1fr;
@@ -1288,9 +1406,16 @@
             }
 
             .match-grid,
-            .skills-categories,
-            .personal-grid {
+            .skills-categories {
                 grid-template-columns: 1fr;
+            }
+
+            .personal-images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .personal-texts {
+                grid-template-columns: 1fr 1fr;
             }
 
             .timeline::before {
@@ -1332,6 +1457,14 @@
 
             .hero h1 {
                 font-size: 2rem;
+            }
+
+            .personal-images {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .personal-texts {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1379,10 +1512,6 @@
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
                     Mein Pitch
                 </a>
-                <a href="#kontakt" class="btn btn-outline">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-                    Kontakt aufnehmen
-                </a>
             </div>
         </div>
 
@@ -1396,6 +1525,16 @@
     <section class="section intro" id="pitch">
         <div class="section-inner">
             <div class="intro-grid">
+                <div class="intro-portrait-col fade-in">
+                    <div class="intro-portrait-wrap">
+                        <img src="nina-glasow.png" alt="Nina Glasow">
+                        <div class="intro-portrait-overlay"></div>
+                        <div class="intro-portrait-caption">
+                            <div class="intro-portrait-name">Nina Glasow</div>
+                            <div class="intro-portrait-role">Bewerbung Leiter:in Marketing, Gästeservice & Events</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="intro-text fade-in-left">
                     <div class="section-label">Mein Pitch</div>
                     <h2 class="section-title">Gastfreundschaft trifft auf<br>digitale Exzellenz</h2>
@@ -1405,10 +1544,10 @@
                     </blockquote>
 
                     <p>
-                        Dieses Zitat aus Ihrem Leitbild spricht mir aus der Seele. In über 8 Jahren Destinationsmarketing und 4 Jahren digitalem Performance-Marketing habe ich genau das gelebt: <strong>unvergessliche Erlebnisse schaffen, die Gäste wiederkommen lassen.</strong>
+                        Dieses Zitat aus eurem Leitbild spricht mir aus der Seele. In über 8 Jahren Destinationsmarketing und 4 Jahren digitalem Performance-Marketing habe ich genau das gelebt: <strong>unvergessliche Erlebnisse schaffen, die Gäste wiederkommen lassen.</strong>
                     </p>
                     <p>
-                        Als gebürtige Bergliebhaberin – ob auf Ski oder dem Mountainbike – bringe ich nicht nur Fachwissen mit, sondern auch eine tiefe persönliche Verbundenheit mit der alpinen Welt. Für die Arosa Bergbahnen AG möchte ich die Brücke zwischen <strong>traditioneller Gastlichkeit und modernster digitaler Vermarktung</strong> schlagen – ganz im Sinne Ihres Leitbilds.
+                        Als gebürtige Bergliebhaberin – ob auf Ski oder dem Mountainbike – bringe ich nicht nur Fachwissen mit, sondern auch eine tiefe persönliche Verbundenheit mit der alpinen Welt. Für die Arosa Bergbahnen AG möchte ich die Brücke zwischen <strong>traditioneller Gastlichkeit und modernster digitaler Vermarktung</strong> schlagen – ganz im Sinne eures Leitbilds.
                     </p>
                     <p>
                         Ich bin überzeugt: Meine Kombination aus strategischem Marketing, Event-Erfahrung, Teamführung und datengetriebener Kampagnensteuerung ist genau das, was Arosa braucht, um die Erwartungen der Gäste nicht nur zu erfüllen, sondern zu übertreffen.
@@ -1416,6 +1555,10 @@
                 </div>
 
                 <div class="intro-stats fade-in-right">
+                    <div style="grid-column: 1 / -1; margin-bottom: 0.5rem;">
+                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--arosa-dark); margin-bottom: 0.3rem;">Mein Profil in Zahlen</h3>
+                        <p style="font-size: 0.85rem; color: var(--arosa-gray); line-height: 1.6;">Was ich für die Arosa Bergbahnen AG mitbringe – auf einen Blick.</p>
+                    </div>
                     <div class="stat-card">
                         <div class="stat-number">8+</div>
                         <div class="stat-label">Jahre Destinationsmarketing</div>
@@ -1526,7 +1669,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">2024 – Heute</div>
-                        <div class="timeline-role">Head of Growth & Operations</div>
+                        <div class="timeline-role">Leiterin Geschäftsentwicklung & Betrieb</div>
                         <div class="timeline-company">Glow Media GmbH, Cham (CH)</div>
                         <div class="timeline-desc">
                             Strategische Skalierung im DACH-Raum. Aufbau und Führung Sales-Team. Über 1'000 Recruiting-Kampagnen für 200+ Unternehmenskunden. Social Ads, Marketing-Automation.
@@ -1539,7 +1682,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">2022 – 2024</div>
-                        <div class="timeline-role">Head of Marketing</div>
+                        <div class="timeline-role">Leiterin Marketing</div>
                         <div class="timeline-company">Sonect AG, Zürich</div>
                         <div class="timeline-desc">
                             Gesamtverantwortung Schweizer Markt. Partnermanagement (TWINT, Valora, Volg). SEO-Strategie mit 4 Mio. Suchanfragen. Social Ads mit 7.6 Mio. Views. Go-to-Market Italien & Mexiko.
@@ -1552,7 +1695,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">2021 – 2022</div>
-                        <div class="timeline-role">Digital Marketing Manager E-Commerce</div>
+                        <div class="timeline-role">Managerin Digitales Marketing & E-Commerce</div>
                         <div class="timeline-company">Virtualrunners, München</div>
                         <div class="timeline-desc">
                             Performance Marketing international (5x ROAS). Organisation Guinness World Record Event (25'000+ Teilnehmer). Partnerschaften mit Warner Brothers & Adidas.
@@ -1620,7 +1763,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">2007 – 2012</div>
-                        <div class="timeline-role">F&E Managerin, Programmleitung & Lehrbeauftragte</div>
+                        <div class="timeline-role">Forschungsreferentin, Programm&shy;leitung & Lehrbeauftragte</div>
                         <div class="timeline-company">Technische Hochschule Rosenheim</div>
                         <div class="timeline-desc">
                             Projektleitung Forschungsprojekte inkl. Solar Decathlon. Aufbau Master-Studiengang «Green Building». Organisation Kongresse, Events, Messen.
@@ -1636,7 +1779,7 @@
     <section class="section vision" id="vision">
         <div class="section-inner">
             <div class="section-label fade-in">Meine Vision für Arosa</div>
-            <h2 class="section-title fade-in">Was ich für die Arosa Bergbahnen bewegen werde</h2>
+            <h2 class="section-title fade-in">Was ich für die Arosa Bergbahnen bewegen will</h2>
 
             <div class="vision-grid">
                 <div class="fade-in-left">
@@ -1774,7 +1917,7 @@
     <section class="section education" id="bildung">
         <div class="section-inner">
             <div class="section-label fade-in">Bildung & Zertifizierungen</div>
-            <h2 class="section-title fade-in">Fundament für Spitzenleistung</h2>
+            <h2 class="section-title fade-in">Was ich mitbringe</h2>
 
             <div class="edu-grid">
                 <div class="edu-block fade-in-left">
@@ -1842,22 +1985,29 @@
             </div>
 
             <div class="personal-grid">
-                <div class="personal-card fade-in">
-                    <div class="personal-icon">⛷️</div>
-                    <h3>Alpinsport-Leidenschaft</h3>
-                    <p>Ski und Mountainbike sind nicht Hobby, sondern Lifestyle. Ich <strong>lebe</strong>, was ich vermarkte – und brenne dafür, andere mit dieser Begeisterung anzustecken.</p>
+                <div class="personal-images fade-in">
+                    <div class="personal-img-card">
+                        <img src="nina-skitour.png" alt="Nina auf Skitour" loading="lazy">
+                    </div>
+                    <div class="personal-img-card">
+                        <img src="nina-mountainbike.png" alt="Nina mit Mountainbike" loading="lazy">
+                    </div>
+                    <div class="personal-img-card">
+                        <img src="ski-mountain.png" alt="Skier vor Bergpanorama" loading="lazy">
+                    </div>
+                    <div class="personal-img-card">
+                        <img src="hund-gletscher.png" alt="Treuer Begleiter am Gletscher" loading="lazy">
+                    </div>
                 </div>
-
-                <div class="personal-card fade-in" style="transition-delay: 0.1s">
-                    <div class="personal-icon">📸</div>
-                    <h3>@fernwehglobal</h3>
-                    <p>Mit <span class="personal-highlight">200'000 Followern</span> auf Instagram weiss ich, wie man Bergwelten inszeniert und Communities aufbaut – ein direkter Mehrwert für die Arosa-Kommunikation.</p>
-                </div>
-
-                <div class="personal-card fade-in" style="transition-delay: 0.2s">
-                    <div class="personal-icon">🏔️</div>
-                    <h3>Wohnort Schweiz</h3>
-                    <p>Aktuell in <strong>Cham (ZG)</strong> wohnhaft – bereit für den Umzug ins Freizeitparadies Arosa. Die Schweiz ist seit Jahren mein Lebensmittelpunkt.</p>
+                <div class="personal-texts fade-in">
+                    <div class="personal-text-block">
+                        <h3>Alpinsport-Leidenschaft</h3>
+                        <p>Ski und Mountainbike sind nicht Hobby, sondern Lifestyle. Ich <strong>lebe</strong>, was ich vermarkte – und brenne dafür, andere mit dieser Begeisterung anzustecken.</p>
+                    </div>
+                    <div class="personal-text-block">
+                        <h3>Wohnort Schweiz</h3>
+                        <p>Aktuell in <strong>Cham (ZG)</strong> wohnhaft – bereit für den Umzug ins Freizeitparadies Arosa. Die Schweiz ist seit Jahren mein Lebensmittelpunkt.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1869,9 +2019,9 @@
             <div class="section-label fade-in" style="color: var(--arosa-red-light);">
                 Kontakt
             </div>
-            <h2 class="section-title fade-in">Lassen Sie uns<br>gemeinsam Gipfel erreichen</h2>
+            <h2 class="section-title fade-in">Lass uns<br>gemeinsam Gipfel erreichen</h2>
             <p class="section-subtitle fade-in">
-                Ich freue mich auf ein persönliches Gespräch und darauf, Sie von meiner Begeisterung für Arosa zu überzeugen.
+                Ich freue mich auf ein persönliches Gespräch und darauf, dich von meiner Begeisterung für Arosa zu überzeugen.
             </p>
 
             <div class="cta-contact fade-in">
@@ -1894,11 +2044,6 @@
                     LinkedIn Profil
                 </a>
             </div>
-
-            <a href="mailto:nina.glow@gmail.com?subject=Bewerbung%20Leiter:in%20Marketing/G%C3%A4steservice/Events%20%E2%80%93%20Nina%20Glasow" class="btn btn-primary fade-in" style="font-size: 1rem; padding: 1.1rem 2.5rem;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Jetzt Gespräch vereinbaren
-            </a>
 
             <div class="cta-addressee fade-in">
                 <p>Bewerbung z.Hd. <strong>Bettina Bass</strong></p>
